@@ -12,6 +12,7 @@ class AnimationHelper {
     
     // MARK: Animatable Properties
     static var opacity = "opacity"
+    static var posY = "position.y"
     
     // MARK: Common Animations
     static func basicFadeAnimation() -> CABasicAnimation {
@@ -19,6 +20,7 @@ class AnimationHelper {
         fadeIn.fromValue = 0.0
         fadeIn.toValue = 1.0
         fadeIn.duration = 1.0
+        fadeIn.fillMode = kCAFillModeBackwards
         
         return fadeIn
     }
